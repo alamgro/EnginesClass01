@@ -408,10 +408,12 @@ GameObject:
   - component: {fileID: 766145262}
   - component: {fileID: 766145261}
   - component: {fileID: 766145266}
+  - component: {fileID: 766145267}
+  - component: {fileID: 766145268}
+  - component: {fileID: 766145269}
   - component: {fileID: 766145264}
   - component: {fileID: 766145263}
   - component: {fileID: 766145265}
-  - component: {fileID: 766145267}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Untagged
@@ -556,6 +558,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 4
+  _jumpForce: 4
+  _playerInput: {fileID: 766145267}
+  OnMovementStarted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 766145266}
+        m_TargetAssemblyTypeName: Movement2D, Assembly-CSharp
+        m_MethodName: StartMoving
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnMovementStopped:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 766145266}
+        m_TargetAssemblyTypeName: Movement2D, Assembly-CSharp
+        m_MethodName: StopMoving
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnJumped:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 766145269}
+        m_TargetAssemblyTypeName: CustomAnimator, Assembly-CSharp
+        m_MethodName: TriggerAnimation
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7400000, guid: 6b5888bd441bed846b2330c9db95ab21, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AnimationClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &766145267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -585,7 +634,19 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 766145266}
         m_TargetAssemblyTypeName: Movement2D, Assembly-CSharp
-        m_MethodName: Move
+        m_MethodName: SetDirection
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 766145268}
+        m_TargetAssemblyTypeName: FlipSprite, Assembly-CSharp
+        m_MethodName: FlipX
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -602,6 +663,32 @@ MonoBehaviour:
   m_DefaultActionMap: Default
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &766145268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766145260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7818daae5f54d84fadb092f34e1381c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 766145261}
+--- !u!114 &766145269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766145260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8ba1190dbeddc34f90db4d7e6688933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 766145265}
 --- !u!1 &1807407591
 GameObject:
   m_ObjectHideFlags: 0
