@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class FlipSprite : MonoBehaviour
 {
     [SerializeField]
