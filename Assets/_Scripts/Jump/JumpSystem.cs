@@ -15,8 +15,8 @@ namespace Jump
         private PlayerInput _playerInput;
         [SerializeReference]
         private IGroundingChecker _groundingChecker;
-        //[SerializeField, Range(0f, 10f)]
-        //private float _jumpForce = 1f;
+        [SerializeField, Range(0f, 10f)]
+        private float _jumpForce = 1f;
         //[Header("Raycast settings")]
 
         [Header("Events")]
@@ -94,7 +94,7 @@ namespace Jump
             }
         }
 
-        //private void AddVerticalImpulse() => _rigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+        private void AddVerticalImpulse() => _rigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
 
         //private bool IsGroundingByRaycast => Physics2D.Raycast(transform.position + _rayToGroundPosition, Vector2.down, _rayToGroundDistance, _groundLayer);
 

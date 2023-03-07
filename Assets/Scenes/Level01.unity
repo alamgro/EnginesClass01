@@ -280,7 +280,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.76321507, y: 3.6702054, z: -4.189078}
+  m_LocalPosition: {x: 0.76321507, y: 3.6702054, z: -6274.189}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -621,8 +621,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 766145268}
-        m_TargetAssemblyTypeName: FlipSprite, Assembly-CSharp
-        m_MethodName: FlipX
+        m_TargetAssemblyTypeName: FlipSprite.FlipSprite, FlipSprite
+        m_MethodName: FlipSpriteOnMoveX
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -655,7 +655,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7818daae5f54d84fadb092f34e1381c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spriteRenderer: {fileID: 766145261}
+  _spriteController:
+    rid: 5932699921386045441
+  references:
+    version: 2
+    RefIds:
+    - rid: 5932699921386045441
+      type: {class: SpriteController, ns: FlipSprite, asm: FlipSprite}
+      data:
+        _spriteRenderer: {fileID: 766145261}
 --- !u!114 &766145269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -685,6 +693,7 @@ MonoBehaviour:
   _playerInput: {fileID: 766145267}
   _groundingChecker:
     rid: 5932699921386045440
+  _jumpForce: 1
   OnFell:
     m_PersistentCalls:
       m_Calls:
@@ -913,8 +922,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_LookAt: {fileID: 1217278560}
+  m_Follow: {fileID: 1217278560}
   m_Lens:
     FieldOfView: 34
     OrthographicSize: 8
@@ -941,7 +950,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1217278558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.76321507, y: 3.6702054, z: -4.189078}
+  m_LocalPosition: {x: 0.76321507, y: 3.6702054, z: -6274.189}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
