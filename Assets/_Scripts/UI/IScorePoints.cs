@@ -1,4 +1,3 @@
-﻿
 namespace UI
 {
     public interface IScorePoints

@@ -1,14 +1,13 @@
+using UI;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    //[SerializeField]
-    //private Mai mainUI;
-
+    [SerializeField]
+    private MainUI _mainUI;
 
     public static GameManager Instance;
-    public IScore Score { get; set; }
-
+    public IScorePoints Score { get; set; }
         
 
     public GameManager()
