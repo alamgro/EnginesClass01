@@ -4,7 +4,6 @@ using UnityEngine.InputSystem;
 
 namespace FlipSprite
 {
-    [Serializable]
     [RequireComponent(typeof(SpriteRenderer))]
     public class FlipSprite : MonoBehaviour
     {

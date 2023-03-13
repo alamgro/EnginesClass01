@@ -1,8 +1,23 @@
 VisualElement {
+    font-size: 12px;
 }
 
 .basic-text {
-    color: rgba(30, 255, 8, 255);
-    font-size: 24px;
+    color: rgb(0, 255, 246);
+    font-size: 50px;
     -unity-text-align: middle-center;
+    -unity-font-style: bold;
+    -unity-text-outline-color: rgba(168, 0, 255, 255);
+    -unity-text-outline-width: 0.1px;
+    letter-spacing: 3px;
+    word-spacing: 0;
+    background-image: none;
+}
+
+.anchor-right {
+    align-items: flex-start;
+    justify-content: flex-start;
+    right: 35px;
+    position: absolute;
+    top: 10px;
 }
