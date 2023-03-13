@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -3403,7 +3403,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CollectablesSheet_143: -1414278248
+      CollectablesSheet_40: 437569715
       CollectablesSheet_92: 89203861
       CollectablesSheet_18: -52171547
       CollectablesSheet_100: -1107619614
@@ -3475,14 +3475,14 @@ TextureImporter:
       CollectablesSheet_102: -313888971
       CollectablesSheet_74: -1679984088
       CollectablesSheet_51: -737483480
+      CollectablesSheet_121: 776835874
       CollectablesSheet_28: 520189387
-      CollectablesSheet_96: 905218108
       CollectablesSheet_65: -28170733
       CollectablesSheet_66: 209398404
       CollectablesSheet_23: 91894867
       CollectablesSheet_109: 1051300283
       CollectablesSheet_139: -725889892
-      CollectablesSheet_121: 776835874
+      CollectablesSheet_96: 905218108
       CollectablesSheet_54: -1244727716
       CollectablesSheet_9: 72860540
       CollectablesSheet_15: -2047883540
@@ -3551,13 +3551,13 @@ TextureImporter:
       CollectablesSheet_31: 1033987883
       CollectablesSheet_135: 1535668715
       CollectablesSheet_26: 418977568
+      CollectablesSheet_27: 1285343459
       CollectablesSheet_127: -1971410633
-      CollectablesSheet_97: -426250303
       CollectablesSheet_145: -530766043
       CollectablesSheet_3: 1983251299
-      CollectablesSheet_40: 437569715
+      CollectablesSheet_97: -426250303
       CollectablesSheet_147: 2077307914
-      CollectablesSheet_27: 1285343459
+      CollectablesSheet_143: -1414278248
       CollectablesSheet_106: 574182215
   spritePackingTag: 
   pSDRemoveMatte: 0

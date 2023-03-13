@@ -11,6 +11,10 @@ public class Gold : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //GameManager.Instance.Score.add    
+        if (!collision.CompareTag("Player")) return;
+
+        GameManager.Instance.Score.AddPoints(_points);
+        GameManager.Instance.GetMainUI.UpdateScore(GameManager.Instance.Score);
+        Destroy(gameObject);
     }
 }

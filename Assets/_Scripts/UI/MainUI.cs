@@ -17,7 +17,7 @@ namespace UI
             _labelScore = _uiDocument.rootVisualElement.Q<Label>("LblScore");
         }
 
-        //public void UpdateScore() => _labelScore.text = $"Score: {_score.Points}";
+        public void UpdateScore(IScorePoints score) => _labelScore.text = $"Score: {score.Points}";
     //public void AddPoints(int points) => 
 }
 

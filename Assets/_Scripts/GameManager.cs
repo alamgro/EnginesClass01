@@ -8,11 +8,11 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance;
     public IScorePoints Score { get; set; }
-        
+    public MainUI GetMainUI => _mainUI;
 
     public GameManager()
     {
-        //Score = new ScorePoints();
+        Score = new ScorePoints();
     }
 
     private void Awake()
@@ -28,6 +28,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //public void AddPoints(int points) => Score. += points;
+    public void AddPoints(int points) => Score.Points += points;
 
 }
