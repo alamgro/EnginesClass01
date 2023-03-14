@@ -20,7 +20,7 @@ namespace Jump
         public Vector3 RayToGroundPosition { get => _rayToGroundPosition; set => _rayToGroundPosition = value; }
         public LayerMask GroundLayer { get => _groundLayer; set => _groundLayer = value; }
         public Color RayColor { get => _rayColor; set => _rayColor = value; }
-
-        public bool IsGroundingByRaycast(Vector3 objectPosition) => Physics2D.Raycast(objectPosition + RayToGroundPosition, Vector2.down, RayToGroundDistance, GroundLayer);
+        public bool IsGroundingByRaycast(Vector3 objectPosition) => 
+            Physics2D.Raycast(objectPosition + RayToGroundPosition, Vector2.down, RayToGroundDistance, GroundLayer);
     }
 }

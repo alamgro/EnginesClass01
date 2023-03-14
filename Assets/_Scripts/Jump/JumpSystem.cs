@@ -13,15 +13,13 @@ namespace Jump
         private Rigidbody2D _rigidbody;
         [SerializeField]
         private PlayerInput _playerInput;
-        [SerializeReference]
-        private IGroundingChecker _groundingChecker;
         [SerializeField, Range(0f, 10f)]
         private float _jumpForce = 1f;
-        //[Header("Raycast settings")]
-
+        [SerializeReference]
+        private IGroundingChecker _groundingChecker;
         [Header("Events")]
-        //[SerializeField]
-        //private UnityEvent OnJumped;
+        [SerializeField]
+        private UnityEvent OnJumped;
         [SerializeField]
         private UnityEvent<float> OnFell;
         [SerializeField]
@@ -41,9 +39,7 @@ namespace Jump
 
         private void Awake()
         {
-
-            _groundingChecker.GroundLayer = LayerMask.NameToLayer("Ground");
-
+            //_groundingChecker.GroundLayer = LayerMask.NameToLayer("Ground");
             _jumpRoutine = JumpRoutine();
 
             _playerInput.actions["Jump"].performed += _ =>
@@ -51,7 +47,7 @@ namespace Jump
                 _airController.IsGrounding = _groundingChecker.IsGroundingByRaycast(transform.position);
                 if (_airController.IsJumping && !_airController.IsGrounding) return;
 
-                //OnJumped?.Invoke();
+                OnJumped?.Invoke();
             };
         }
 
@@ -63,8 +59,8 @@ namespace Jump
 
         public void StartJumping()
         {
+            AddVerticalImpulse();
             _airController.IsJumping = true;
-            //AddVerticalImpulse();
             StartCoroutine(JumpRoutine());
         }
         public void StopJumping()

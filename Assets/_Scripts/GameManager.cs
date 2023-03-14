@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if(!Instance)
+        if (!Instance)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
@@ -30,4 +30,4 @@ public class GameManager : MonoBehaviour
 
     public void AddPoints(int points) => Score.Points += points;
 
-}
+} 
