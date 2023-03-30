@@ -45,7 +45,7 @@ namespace CustomNode
             });
 
             jumpForceInput = ValueInput("Move Speed", _jumpForce);
-            rigidBody2DInput = ValueInput<Rigidbody2D>("Rigidbody2D");
+            rigidBody2DInput = ValueInput<Rigidbody2D>("RigidBody2D");
             layerMaskInput = ValueInput("Layer Mask", _layerMask);
             outputTrigger = ControlOutput("");
         }

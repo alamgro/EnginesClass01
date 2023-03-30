@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -28,6 +30,32 @@ namespace Jump
         // Routine while it stays on air
         private IEnumerator _jumpRoutine;
         private IAirController _airController;
+
+        private async void GroundTouchedFirstTime(Action<string> onCompleted)
+        {
+            var message = "Completed";
+
+            Debug.Log("Loading...");
+            await Task.Delay(200);
+
+            try
+            {
+                onCompleted?.Invoke(message);
+            }
+            catch (Exception e)
+            {
+                message = "[Error]: Action not completed";
+                throw;
+            }
+        }
+
+        private void Start()
+        {
+            GroundTouchedFirstTime(message => 
+            {
+                Debug.Log(message);
+            });
+        }
 
         public JumpSystem()
         {
