@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.Events;
 
 namespace Collectables
@@ -9,6 +10,10 @@ namespace Collectables
         private int _value;
         [SerializeField]
         private UnityEvent _OnCollected;
+        [SerializeField]
+        private AudioClip _audioClip;
+        [SerializeField]
+        private AudioMixerGroup _audioMixerGroup;
 
         public int Value => _value;
 
@@ -25,6 +30,7 @@ namespace Collectables
             GameManager.Instance.Score.AddPoints(_value);
             GameManager.Instance.GetMainUI.UpdateScore(GameManager.Instance.Score);
             Destroy(gameObject);
+            GameManager.Instance.MyAudioManager.PlayAudio(_audioClip, _audioMixerGroup);
         }
 
 

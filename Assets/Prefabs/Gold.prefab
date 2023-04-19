@@ -130,3 +130,5 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _audioClip: {fileID: 8300000, guid: dcc5249745e57f647adda3303709a7ca, type: 3}
+  _audioMixerGroup: {fileID: 633708620867321386, guid: 161d0478bb924e940a6b1f0e5954085a, type: 2}
