@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     private MainUI _mainUI;
     [SerializeField]
     private AudioManager _audioManager;
-    
 
     public static GameManager Instance;
     public IScorePoints Score { get; set; }
@@ -34,6 +33,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
     public void AddPoints(int points) => Score.Points += points;
 
+    public void PauseGame()
+    {
+        Time.timeScale = 0.0f;
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1.0f;
+    }
 } 
